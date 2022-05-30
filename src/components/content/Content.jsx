@@ -97,6 +97,14 @@ export const Window = styled.div `
    // transition: margin-left 0.3s ease;
   }
 
+
+  .loader {
+    top:30% ;
+    left:48% ;
+    z-index: 1000;
+    position: absolute;
+  }
+
 `
 
 export const WindowFooter = styled.div `

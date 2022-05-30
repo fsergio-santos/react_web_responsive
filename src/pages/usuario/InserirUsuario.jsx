@@ -8,7 +8,7 @@ const InserirUsuario = () => {
     return (
         <Fragment>
               <WindowTitle/>
-                <div className="row">
+              <div className="row">
                     <div className="col-md-12">
                         <Window>
                         <div className="row">    
@@ -89,13 +89,13 @@ const InserirUsuario = () => {
                                 </form>
                                 <WindowFooter/>
                                 <div className="row">
-                                    <div className="col-sm-4 form-group">
+                                    <div className="col-xs-12 col-sm-12 col-md-4 form-group">
                                         <button className="btn btn-success btn-lg form-control" >
                                             Salvar Cadastro
                                             <i className="fontIcon"><FaIcons.FaSave/></i>
                                         </button>
                                     </div>    
-                                    <div className="col-sm-4 form-group">    
+                                    <div className="col-xs-12 col-sm-12 col-md-4 form-group">    
                                         <a type="button" className="btn btn-secondary btn-lg form-control">
                                             Cancelar Cadastro
                                             <i className="fontIcon"><FaIcons.FaTimesCircle/></i>

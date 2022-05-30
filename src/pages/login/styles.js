@@ -113,7 +113,7 @@ export const AccessContent = styled.section `
 } 
 
 
-@media (max-width: 480px){
+@media (max-width: 500px){
   .content-box{
       position: relative;
       min-width: 420px;
