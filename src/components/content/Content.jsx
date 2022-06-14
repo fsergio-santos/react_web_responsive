@@ -20,19 +20,23 @@ const ContentContainer = styled.div `
   margin-top: 70px;
   padding: 30px;
   background-color: #E5E5E5;
-  -webkit-transition: margin-left 0.3s ease;
-  -o-transition: margin-left 0.3s ease;
-  transition: margin-left 0.3s ease;
+ // -webkit-transition: margin-left 0.3s ease;
+ // -o-transition: margin-left 0.3s ease;
+ // transition: margin-left 0.3s ease;
+  animation: showSidebar .6s;
 
   @media( max-width:780px){
     margin-left:0;
     margin-top:0p ;
   }
 
+  
+  
   @media (min-width: 768px) {
-   margin-left: ${({ sideBar }) => (sideBar ? '220px' : '0')};
-   // transition: margin-left 0.3s ease;
+    margin-left: ${({ sideBar }) => (sideBar ? '220px' : '78px')};
   }
+
+ 
 
   @media (max-width: 767px) {
      margin-top: 70px;
@@ -50,6 +54,8 @@ const ContentContainer = styled.div `
     //background-color: #E5E5E5;
   }
 
+  
+
 `
 
 
@@ -59,9 +65,10 @@ export const Window = styled.div `
   background: #ffffff;
   border-radius: 3px;
   padding: 20px;
-  -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  //-webkit-transition: background-color 0.3s ease;
+  //-o-transition: background-color 0.3s ease;
+  //transition: background-color 0.3s ease;
+  animation: showSidebar .4s;
 
   @media print {
      border: 1px solid #ddd;
@@ -92,11 +99,6 @@ export const Window = styled.div `
 
   }
   
-  @media (min-width: 768px) {
-   margin-left: ${({ sideBar }) => (sideBar ? '220px' : '0')};
-   // transition: margin-left 0.3s ease;
-  }
-
 
   .loader {
     top:30% ;
@@ -104,6 +106,19 @@ export const Window = styled.div `
     z-index: 1000;
     position: absolute;
   }
+
+
+  @media (min-width: 768px) {
+     margin-left: ${({ sideBar }) => (sideBar ? '220px' : '0px')};
+  }
+
+  @media (max-width: 768px) {
+     margin-left: ${({ sideBar }) => (sideBar ? '220px' : '80px')};
+  }
+
+
+
+  
 
 `
 
@@ -168,10 +183,7 @@ export const WindowTitle = styled.div `
     }
 
 
-   @media (min-width: 768px) {
-   //   margin-left: ${({ sideBar }) => (sideBar ? '220px' : '0')};
-    // transition: margin-left 0.3s ease;
-    }
+   
   
 }
   

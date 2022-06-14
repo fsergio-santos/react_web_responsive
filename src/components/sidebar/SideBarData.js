@@ -4,6 +4,7 @@ import * as FaIcons from 'react-icons/fa';
 //import * as IoIcons from 'react-icon/ai';
 import * as RiIcons from 'react-icons/ri';
 
+
 export const SideBarData = [
     {
        page:'Página Principal',

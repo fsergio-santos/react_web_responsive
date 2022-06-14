@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Content from "../content/Content";
 import Header from "../header/Header";
-import SideBar from "../sidebar/SideBar";
-
+//import SideBar from "../sidebar/SideBar";
+import SideBar from '../sideMenu/SideBar';
 
 const Layout = ({children}) => {
     
@@ -11,6 +11,26 @@ const Layout = ({children}) => {
     const toggleMenu = () => {
         setToggle(!toggle)  
     }
+
+    useEffect(()=>{
+        if (window.innerWidth < 768) {
+            setToggle(false);
+        } 
+     },[]);
+ 
+     useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth < 768) {
+            setToggle(false);
+          } else {
+            setToggle(true);
+          }
+        };
+        window.addEventListener("resize", handleResize);
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }, []);
 
     return (
         <Fragment>

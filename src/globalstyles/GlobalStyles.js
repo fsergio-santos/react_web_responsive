@@ -20,7 +20,7 @@ body {
 
 .fontSize {
    font-size: 1.2rem;
-   font-weight: 600 ;
+   font-weight: 700 ;
 }
 
 .fontIcon {
@@ -43,6 +43,39 @@ body {
   font-size:15px;
 
 }
+
+.show-image{
+  float: left;
+  margin-right: 15px;
+  width: 25px;
+  height: 25px;
+}
+
+.show-message {
+  font-weight: 700;
+	font-size: 16px;
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 6px;
+  width: 300px;
+  height: 18px
+}
+
+.closebtn {
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
 
 @media only screen and (max-width: 800px) {
 	

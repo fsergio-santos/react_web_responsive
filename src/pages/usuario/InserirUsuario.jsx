@@ -1,22 +1,39 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import { Link } from 'react-router-dom'
 import { WindowTitle, Window, WindowFooter } from "../../components/content/Content";
 import * as FaIcons from 'react-icons/fa';
 import { DEFAULT_IMAGEM } from "../../config/Config";
-
+import Alert from "../../components/alert/Alert";
 
 const InserirUsuario = () => {
+    
+    const [show, setShow] = useState(false)
+
+    const onSubmitData = (e) => {
+        e.preventDefault();
+        setShow(!show)
+    }
+
     return (
         <Fragment>
               <WindowTitle/>
               <div className="row">
                     <div className="col-md-12">
                         <Window>
+                        {
+                            show && (
+                                <Alert mensagem="Registro cadastrado com sucesso!" 
+                                       show={true}
+                                       tipo='danger'
+                                       setShow={()=>setShow(false)}/>
+                            )
+                        }    
                         <div className="row">    
                              <div className="col-md-4">
                                  <div className="card">
                                      <div className="card-body">
                                          <div className="d-flex flex-column align-items-center text-center">
-                                            <img src={DEFAULT_IMAGEM} class="rounded-circle" width="150"/>
+                                            <img src={DEFAULT_IMAGEM} className="rounded-circle" width="150"/>
                                             <div className="mt-3">
                                                 <button type="" className="btn btn-success btn-lg" title="Upload de foto">
                                                     <FaIcons.FaUpload/>
@@ -30,7 +47,7 @@ const InserirUsuario = () => {
                                  </div>
                              </div>
                              <div className="col-md-8">
-                                <form>
+                                <form >
                                     <div className="row mt-3">
                                         <div className="col-xs-12 col-sm-12">
                                             <div className="form-group">
@@ -90,16 +107,16 @@ const InserirUsuario = () => {
                                 <WindowFooter/>
                                 <div className="row">
                                     <div className="col-xs-12 col-sm-12 col-md-4 form-group">
-                                        <button className="btn btn-success btn-lg form-control" >
+                                        <button className="btn btn-success btn-lg form-control" onClick={(e) => onSubmitData(e)}>
                                             Salvar Cadastro
                                             <i className="fontIcon"><FaIcons.FaSave/></i>
                                         </button>
                                     </div>    
                                     <div className="col-xs-12 col-sm-12 col-md-4 form-group">    
-                                        <a type="button" className="btn btn-secondary btn-lg form-control">
+                                        <Link to='/usuario/cancelar' type="button" className="btn btn-secondary btn-lg form-control" >
                                             Cancelar Cadastro
                                             <i className="fontIcon"><FaIcons.FaTimesCircle/></i>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div> 
                             </div>

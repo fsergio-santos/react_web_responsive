@@ -44,7 +44,6 @@ const TabelaUsuario = () => {
    }, []);
 
    const commentsData = useMemo(() => {
-        console.log(pageSize)
         let firstPage = 0;
         let lastPage = 0;
         let computedComments = comments;
@@ -65,8 +64,6 @@ const TabelaUsuario = () => {
         }
         firstPage = (currentPage - 1) * pageSize;
         lastPage =  firstPage + pageSize;
-        console.log(firstPage)
-        console.log(lastPage)
         return computedComments.slice(firstPage, lastPage );
     }, [comments, currentPage, search, pageSize, sorting]);
 

@@ -13,11 +13,12 @@ const Rotas = () => {
         <Router>
             <Routes>
                <Route path="/" exact element={<Login/>}/>
-               <Route path="/login" exact element={<Login/>}/>
-               <Route path="/registrar" exact element={<Registrar/>}/>
-               <Route path="/recuperar" exact element={<Recuperar/>}/>
+               <Route path="/login"  element={<Login/>}/>
+               <Route path="/registrar"  element={<Registrar/>}/>
+               <Route path="/recuperar"  element={<Recuperar/>}/>
                <Route path="/usuario/inserir" element={<AppRouter><InserirUsuario/></AppRouter>} />
                <Route path="/usuario/listar" element={<AppRouter><TabelaUsuario/></AppRouter>} />
+               <Route path="/usuario/cancelar" element={<AppRouter><TabelaUsuario/></AppRouter>} />
             </Routes>   
         </Router>
     )
